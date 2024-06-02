@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void decode(char char_array[]);
+void decode(char array[],int len);
 
 int main()
 {
@@ -22,27 +22,37 @@ int main()
 
 	// declaring character array (+1 for null terminator) 
 	char* char_array = new char[length + 1];
-	char* backup_arr = new char[length + 1];
+	
 
 	char_array = &str[0]; // converting string to char array for operation
 
-	backup_arr = char_array;
+	
 
 	cout << bosluk << "Entered string: " << char_array << bosluk;
 
 	cout << "Here is your output: ";
-	decode(char_array);
+	decode(char_array,length);
 
 
 	return 0;
 }
 
-void decode(char char_array[])
+void decode(char array[], int len)
 {
-	int i = 0;
+	//int i = 0;
 	bool flag = 0;
-
-
-
+    //char* backup_arr = new char[len + 1];
+	char temp;
+	for (int i = 0; i < len/2; i++) // reversing the string
+	{
+		temp = array[i];
+		array[i] = array[len-1-i];
+		array[len-1 - i] = temp;
+		
+	  
+		//cout << " HARF: " << array[i];
+	}
+	
+	cout <<" Reversed string: " <<array<< bosluk;
 
 }
