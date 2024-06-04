@@ -32,7 +32,6 @@ int main()
 
 	cout << bosluk << "Entered string: " << char_array << bosluk;
 
-	cout << "Here is your output: ";
 	reverse(char_array,length);
 
 
@@ -62,17 +61,28 @@ void reverse(char array[], int len)
 
 }
 
-void decode(char reveresed_array[], int boyut)
+void decode(char reveresed_array[], int boyut) // This function removes symbols and numerical values and obtains a clean string.
 {
 	int k = 0;
-	bool flag = 0;
-
+	
+	cout << "Here is your output: ";
 	while (reveresed_array[k] !='\0')
 	{
-
-
-
+		if (isalpha(reveresed_array[k]) )
+		{
+			cout << reveresed_array[k];
+			k++;
+		}
+		else if (reveresed_array[k] != ' ' && !(isalpha(reveresed_array[k])) )
+		{			
+			k++;
+		}
+		else
+		{
+			cout <<" ";
+			k++;
+		}
+		
 	}
-
 
 }
