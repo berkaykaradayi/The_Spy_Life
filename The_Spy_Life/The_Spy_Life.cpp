@@ -6,7 +6,9 @@
 
 using namespace std;
 
-void decode(char array[],int len);
+void reverse(char array[],int len);
+
+void decode(char reveresed_array[], int boyut);
 
 int main()
 {
@@ -31,13 +33,13 @@ int main()
 	cout << bosluk << "Entered string: " << char_array << bosluk;
 
 	cout << "Here is your output: ";
-	decode(char_array,length);
+	reverse(char_array,length);
 
 
 	return 0;
 }
 
-void decode(char array[], int len)
+void reverse(char array[], int len)
 {
 	//int i = 0;
 	bool flag = 0;
@@ -54,5 +56,23 @@ void decode(char array[], int len)
 	}
 	
 	cout <<" Reversed string: " <<array<< bosluk;
+
+
+	decode(array,len); //sending reversed string to function to decode op.
+
+}
+
+void decode(char reveresed_array[], int boyut)
+{
+	int k = 0;
+	bool flag = 0;
+
+	while (reveresed_array[k] !='\0')
+	{
+
+
+
+	}
+
 
 }
